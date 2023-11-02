@@ -6,39 +6,35 @@ app.get('/', (request, response) => {
 });
 
 app.get('/sum', (request, response) => {
-  const {number1, number2} = request.query;
+  const { number1, number2 } = request.query;
 
   const sumResult = parseInt(number1) + parseInt(number2);
 
-  response.send({sumResult})
-
+  response.send({ sumResult });
 });
 
 app.get('/subtraction', (request, response) => {
-  const {number1, number2} = request.query;
+  const { number1, number2 } = request.query;
 
   const subtractionResult = parseInt(number1) - parseInt(number2);
 
-  response.send({subtractionResult})
-
+  response.send({ subtractionResult });
 });
 
 app.get('/multiplication', (request, response) => {
-  const {number1, number2} = request.query;
+  const { number1, number2 } = request.query;
 
   const multiplicationResult = parseInt(number1) * parseInt(number2);
 
-  response.send({multiplicationResult})
-
+  response.send({ multiplicationResult });
 });
 
-app.get('/div', (request, response) => {
-  const {number1, number2} = request.query;
+app.get('/ratio', (request, response) => {
+  const { number1, number2 } = request.query;
 
-  const divResult = parseInt(number1) / parseInt(number2);
+  const ratioResult = parseInt(number1) / parseInt(number2);
 
-  response.send({divResult})
-
+  response.send({ ratioResult });
 });
 
 app.listen(3000);
