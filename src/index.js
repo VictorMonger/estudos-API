@@ -40,8 +40,8 @@ app.get('/ratio', (request, response) => {
       throw new Error ('Divisor não pode ser igual a zero.')
     }
     const ratioResult = number1int / number2int;
-    response.send({ ratioResult });
 
+    response.send({ ratioResult });
   } catch (error) {
     response.status(400).send({ error: error.message });
   }
